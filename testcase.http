@@ -1,0 +1,27 @@
+POST http://localhost:8090/rest/server/containers/business-proc-kjar-1_0-SNAPSHOT/processes/rest_process.rectcall/instances
+Accept: application/json
+Content-Type: application/json
+
+{
+    "message": { 
+        "status": 0,
+        "message": "Hello World!" 
+    }
+}
+
+###
+GET http://localhost:8090/rest/server/containers
+Authorization: Basic user:user
+Accept: application/json
+
+###
+GET http://localhost:8090/rest/server/containers/business-proc-kjar-1_0-SNAPSHOT/processes
+Accept: application/json
+
+###
+GET http://localhost:8090/rest/server/server/queries/processes/definitions
+Accept: application/json
+
+###
+GET http://localhost:8090/rest/server/swagger.json
+Accept: application/json
